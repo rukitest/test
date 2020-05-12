@@ -1,0 +1,307 @@
+/* ------------------------------------ */
+*{
+  margin:0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+h1{
+  color: #727171;
+}
+
+h2{
+  color: #727171;
+  text-align: center;
+}
+
+
+h3{
+  color: #727171;
+  }
+
+/* title */
+h4{
+  color: #727171;
+  border-left: 10px solid #727171;
+  padding: 3px 10px;
+}
+
+/* sub title */
+h5{
+  color: #727171;
+  border-left: 10px solid #727171;
+  padding: 3px 10px;
+}
+
+
+p{
+  color: #727171;
+  font-size: 11pt;
+  line-height: 30px;
+}
+
+pre{
+  margin-top: 2rem;
+  color: #727171;
+  font-size: 11pt;
+  line-height: 30px;
+  font-weight: normal;
+}
+
+
+body{
+  font-family:"HiraMinPro-W3",serif;
+}
+
+/* ---------------------------------- */
+
+
+/* ------------header------------ */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: #fff;
+  color: black;
+  z-index: 99999999999;
+}
+
+header h1{
+  z-index: -1;
+  position: absolute;
+  overflow: hidden;
+  float: left;
+  font-size: 0pt;
+  margin: 2rem;
+}
+
+header img{
+  z-index: 2;
+  width: 150px;
+  height: 75px;
+  margin-left: 0rem;
+  margin-top: 0.5rem;
+}
+
+header h2{
+  position: absolute;
+  top: 5.5rem;
+  left: 2.8rem;
+  font-size: 9pt;
+  color: #696969;
+}
+
+#logo_linkbox{
+  margin-left: 1rem;
+  width: 150px;
+  height: 75px;
+  position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+
+  header{
+    height: 4rem;
+  }
+
+  header img{
+    width: 100px;
+    height: 50px;
+    margin-left: 0.5rem;
+  }
+
+  #logo_linkbox{
+    margin-left: 1rem;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+  }
+}
+
+
+/* ---------------------------------- */
+
+/* ---------Menu_setting--------- */
+
+#MenuButton{
+  display: none;
+}
+
+#MenuList{
+  position: absolute;
+  top: 3.7rem;
+  right: 2rem;
+  width: auto;
+  z-index: 9999;
+}
+
+#MenuList ul {
+  display: flex;
+  flex-direction:row;
+}
+
+#MenuList li {
+  width: auto;
+  padding: 0 1em;
+  border-bottom: 1px solid #ffffff;
+}
+
+#MenuList a {
+  color: #000;
+  font-size: 11pt;
+}
+
+#MenuList a:hover{
+  text-decoration:none;
+  border-bottom:2px solid #aba9a9;
+  padding-bottom:3px;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+  #MenuButton{
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .MenuButtonLine {
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: #000;
+    transition: ease .5s;
+  }
+
+  .MenuButtonLine:nth-child(1) {
+    top: 0;
+  }
+  .MenuButtonLine:nth-child(2) {
+    margin: 8px 0;
+  }
+  .MenuButtonLine:nth-child(3) {
+    top: 0;
+  }
+
+  #MenuButton.open .MenuButtonLine:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+
+  #MenuButton.open .MenuButtonLine:nth-child(2) {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+
+  #MenuButton.open .MenuButtonLine:nth-child(3) {
+    top: -10px;
+    transform: rotate(-45deg);
+  }
+
+  #MenuList {  /* Default Display None */
+    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-top: 1rem;
+    background-color: #fff;
+    z-index: 9999;
+  }
+
+  #MenuList ul {
+    flex-direction: column;
+  }
+
+  #MenuList li{
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid #727171;
+  }
+
+  #MenuList a{
+    display: block;
+    width: 100%;
+    padding: 0.8rem 2rem;
+  }
+
+}
+
+/* --------------------------- */
+
+
+/* ---------------index----------- */
+
+#main_wrpper{
+  min-width: 100vw;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #main_wrpper{
+    margin-top: 1rem;
+  }
+}
+
+.main_about_section{
+  background: url(../img/index/main.jpg) no-repeat left;
+  background-size: 400px;
+  display: block;
+  height: auto;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 0;
+  margin-left: 2%;
+}
+
+.main_inner_container{
+  width: 80%;
+  float: right;
+  background-color: #fff;
+  margin-top: 0rem;
+  padding: 80px;
+}
+
+#main_wrpper h3{
+  font-size: 12pt;
+  font-weight: normal;
+}
+
+#main_wrpper p{
+  margin-top: 2rem;
+}
+
+
+@media screen and (max-width:1000px){
+
+  .main_inner_container{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:720px){
+  .main_about_section{
+    background-size: 0px;
+  }
+
+  .main_inner_container{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* --------------------------- */
